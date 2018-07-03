@@ -38,7 +38,7 @@ class App extends Component {
           <p>
             {this.state.scrollTextMovie.opening_crawl}
             {this.state.scrollTextMovie.title}
-            {this.state.scrollTextMovie.release_date}
+            {this.state.scrollTextMovie.release_date.split('-')[0]}
           </p>
         </aside>
         <main>
