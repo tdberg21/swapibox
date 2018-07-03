@@ -1,10 +1,12 @@
+import generateRandomNumber from './helper.js';
 
 
-// const apiCall = () => {
-//   fetch("https://swapi.co/api/films/")
-//     .then(data => data.json())
-//     .then(parsedData => console.log(parsedData.results[this.randomNumGenerator()].opening_crawl));
-// };
+const getScrollText = () => {
+  const url = `https://swapi.co/api/films/${generateRandomNumber()}/`;
+  const promise = fetch(url)
+    .then(data => data.json());
 
+  return promise;
+};
 
-// export default apiCall;
+export default getScrollText;
