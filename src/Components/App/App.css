@@ -12,9 +12,9 @@ p {
   position: absolute;
 	width: 15vw;
 	bottom: 0;
-	text-align: justify;
+	/* text-align: justify; */
   overflow: hidden;
-  animation: scroll 100s linear 4s infinite;
+  animation: scroll 100s linear 0s infinite;
 }
 
 main {

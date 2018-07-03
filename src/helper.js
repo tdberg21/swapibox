@@ -1,7 +1,7 @@
 
 
 const generateRandomNumber = () => {
-  return Math.floor(Math.random() * 7);
+  return Math.floor(Math.random() * 6) + 1;
 };
 
 // const dateCleaner = (date) => {
