@@ -12,7 +12,7 @@ class App extends Component {
     super(); 
     
     this.state = {
-      info: [],
+      people: [],
       scrollTextMovie: {}
     };
 
@@ -29,13 +29,32 @@ class App extends Component {
     });
   }
 
-  getData = async (event) => {
+  getData = (event) => {
     var category = event.target.title;
     const url = `https://swapi.co/api/${category}/`;
     fetch(url)
       .then(data => data.json()) 
-      .then(parsedData => this.setState({info: parsedData.results}))
-      .catch(error => console.log(error))
+      .then(parsedData => this.fetchHomeWorld(parsedData.results) && this.fetchSpecies(parsedData.results)) 
+      .then(people => this.setState({people}))
+      .catch(error => console.log(error));
+  }
+
+  fetchHomeWorld = (data) => {
+    const unresolvedPromises = data.map(person => (
+      fetch(person.homeworld)
+        .then(data => data.json())
+        .then(results => ({...person, homeworld: results.name}))
+    ));
+    return Promise.all(unresolvedPromises);
+  }
+
+  fetchSpecies = (data) => {
+    const unresolvedPromises = data.map(person => (
+      fetch(person.species)
+        .then(data => data.json())
+        .then(results => ({ ...person, species: results.name }))
+    ));
+    return Promise.all(unresolvedPromises);
   }
 
 
@@ -52,7 +71,7 @@ class App extends Component {
         <main>
           <Header />
           <Controls getData= {this.getData}/>
-          <Container info= {this.state.info}/>
+          <Container people= {this.state.people}/>
         </main>
       </div>
     );
