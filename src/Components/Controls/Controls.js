@@ -1,24 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Controls = (props) => {
+const Controls = ({ getData, getPlanetData }) => {
 
   return (
     <div>
       <button
-        onClick={(event) => props.getData(event)}
+        onClick={(event) => getData(event)}
         title="people"
       >
         People
       </button>
       <button
-        onClick={(event) => props.getData(event)}
+        onClick={(event) => getPlanetData(event)}
         title="planets"
       >
       Planets
       </button>
       <button
-        onClick={(event) => props.getData(event)}
+        onClick={(event) => getPlanetData(event)}
         title="vehicles"
       >
       Vehicles
@@ -27,15 +27,10 @@ const Controls = (props) => {
   );
 };
 
-
+Controls.propTypes = {
+  getData: PropTypes.func
+};
 
 export default Controls;
 
 
-// The cards should have:
-// Name
-// Homeworld
-// Species
-// Population of Homeworld
-// A button to “Favorite” the person
-// The button should have an active class indicating it has been pressed.
