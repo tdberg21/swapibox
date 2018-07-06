@@ -101,6 +101,26 @@ class App extends Component {
     return Promise.all(unresolvedPromises);
   }
 
+  getVehicleData = (event) => {
+    var category = event.target.title;
+    const url = `https://swapi.co/api/${category}/`;
+    fetch(url)
+      .then(data => data.json())
+      .then(parsedData => this.cleanVehicleData(parsedData.results))
+      .then(cleanData => this.setState({cards: cleanData}))
+  }
+
+  cleanVehicleData = (vehicles) => {
+    const vehiclesToRender = vehicles.map(vehicle => {
+      return {
+        name: vehicle.name,
+        model: vehicle.model,
+        class: vehicle.vehicle_class,
+        passengers: vehicle.passengers
+      };
+    });
+    return vehiclesToRender;
+  }
 
 
   render() {
@@ -117,7 +137,8 @@ class App extends Component {
           <Header />
           <Controls 
             getData= {this.getData}
-            getPlanetData= {this.getPlanetData}/>
+            getPlanetData= {this.getPlanetData}
+            getVehicleData= {this.getVehicleData}/>
           <CardContainer cards= {this.state.cards}/>
         </main>
       </div>

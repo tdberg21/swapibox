@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 const Card = (props) => {
   if (props.info.species) {
-    console.log(props.info)
     return (
       <div>
         <h5>{props.info.name}</h5>
@@ -15,7 +14,6 @@ const Card = (props) => {
       </div>
     );
   } else if (props.info.terrain) {
-    console.log(props.info)
     return (
       <div>
         <h5>{props.info.planet}</h5>
@@ -25,6 +23,17 @@ const Card = (props) => {
         <button>Favorite</button>
       </div>
     );
+  } 
+  if (props.info.model) {
+    return (
+      <div>
+      <h5>{props.info.name}</h5>
+        <p>model: {props.info.model} </p>
+        <p>class: {props.info.class}</p>
+        <p>passengers:{props.info.passengers}</p>
+        <button>Favorite</button>
+      </div>
+    )
   }
 };
 
