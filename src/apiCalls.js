@@ -1,10 +1,11 @@
 
 
-// const apiCall = () => {
-//   fetch("https://swapi.co/api/films/")
-//     .then(data => data.json())
-//     .then(parsedData => console.log(parsedData.results[this.randomNumGenerator()].opening_crawl));
-// };
+const fetchData = (number, category) => {
+  const url = `https://swapi.co/api/${category}/${number}/`;
+  const promise = fetch(url)
+    .then(data => data.json())
+    .catch(error => console.log(error));
+  return promise;
+};
 
-
-// export default apiCall;
+export default fetchData;

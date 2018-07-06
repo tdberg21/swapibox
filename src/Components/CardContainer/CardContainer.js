@@ -1,10 +1,23 @@
 import React from 'react';
+import Card from '../Card/Card.js';
+import PropTypes from 'prop-types';
 
-const CardContainer = () => {
-
+const CardContainer = ({ cards }) => {
+  const cardsToRender = cards.map((item, index) => {
+    return (
+      <Card 
+        info={item}
+        key={Date.now()} />
+    );
+  });
+  
   return (
-    <div>CardContainer</div>
+    <div>{cardsToRender}</div>
   );
+};
+
+CardContainer.propTypes = {
+  cards: PropTypes.array
 };
 
 export default CardContainer;
