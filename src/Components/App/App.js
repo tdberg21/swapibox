@@ -71,7 +71,6 @@ class App extends Component {
         return cleanPlanets.map(planet => {
           this.fetchResidents(planet.residents)
           .then(names => planet.residents = names)
-          console.log(planet)
           return planet
         });
       }

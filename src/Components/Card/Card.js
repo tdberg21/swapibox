@@ -13,13 +13,16 @@ const Card = (props) => {
         <button>Favorite</button>
       </div>
     );
-  } else if (props.info.terrain) {
+  } 
+  if (props.info.terrain) {
+    const residentsToDisplay = props.info.residents.map(resident => <li>{resident}</li>)
     return (
       <div>
         <h5>{props.info.planet}</h5>
         <p>climate: {props.info.climate} </p>
         <p>terrain: {props.info.terrain}</p>
         <p>population:{props.info.population}</p>
+        <ul>{residentsToDisplay}</ul>
         <button>Favorite</button>
       </div>
     );
@@ -27,7 +30,7 @@ const Card = (props) => {
   if (props.info.model) {
     return (
       <div>
-      <h5>{props.info.name}</h5>
+        <h5>{props.info.name}</h5>
         <p>model: {props.info.model} </p>
         <p>class: {props.info.class}</p>
         <p>passengers:{props.info.passengers}</p>
