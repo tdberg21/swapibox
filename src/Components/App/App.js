@@ -56,7 +56,7 @@ class App extends Component {
     const unresolvedPromises = data.map(person => (
       fetch(person.species)
         .then(data => data.json())
-        .then(results => ({ ...person, species: results.name }))
+        .then(results => ({name: person.name, homeworld: person.homeworld, population: person.population, species: results.name }))
     ));
     return Promise.all(unresolvedPromises);
   }

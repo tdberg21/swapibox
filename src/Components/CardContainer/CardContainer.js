@@ -7,7 +7,7 @@ const CardContainer = ({ cards }) => {
     return (
       <Card 
         info={item}
-        key={Date.now()} />
+        key={index} />
     );
   });
   
