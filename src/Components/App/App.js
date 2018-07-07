@@ -19,16 +19,23 @@ class App extends Component {
 
     this.getData = this.getData.bind(this);
   }
+
   addToFaves = (key) => {
-    console.log(key);
     let cardToFave;
     this.state.cards.forEach(card => {
       if (card.id === key) {
-        cardToFave = card
-    }})
+        cardToFave = card;
+      }
+    });
     this.setState({
       favorites: [...this.state.favorites, cardToFave]
-    })
+    });
+  }
+
+  showFaves = () => {
+    this.setState({
+      cards: this.state.favorites
+    });
   }
 
   async componentDidMount() {
@@ -64,10 +71,10 @@ class App extends Component {
     return Promise.all(unresolvedPromises);
   }
 
-  fetchSpecies = (data) => {
-    const unresolvedPromises = data.map(person => (
+  fetchSpecies = (apiData) => {
+    const unresolvedPromises = apiData.map(person => (
       fetch(person.species)
-        .then(data => data.json())
+        .then(response => response.json())
         .then(results => ({ name: person.name, homeworld: person.homeworld, population: person.population, species: results.name, id: Date.now() }))
     ));
     return Promise.all(unresolvedPromises);
@@ -77,13 +84,13 @@ class App extends Component {
     var category = event.target.title;
     const url = `https://swapi.co/api/${category}/`;
     return fetch(url)
-      .then(data => data.json())
+      .then(response => response.json())
       .then(planets => this.cleanPlanetData(planets.results))
       .then(cleanPlanets =>  {
         return cleanPlanets.map(planet => {
           this.fetchResidents(planet.residents)
-            .then(names => planet.residents = names)
-          return planet
+            .then(names => planet.residents = names);
+          return planet;
         });
       }
       )
@@ -92,13 +99,14 @@ class App extends Component {
   }
 
   cleanPlanetData = (planets) => {
-    const cleanPlanets = planets.map(planet => {
+    const cleanPlanets = planets.map((planet, index) => {
       return {planet: planet.name,
         population: planet.population,
         terrain: planet.terrain,
         climate: planet.climate,
         residents: planet.residents, 
-        id: Date.now()};
+        id: `${index} ${planet.name}`
+      };
     });
     return cleanPlanets;
   }
@@ -129,7 +137,7 @@ class App extends Component {
         model: vehicle.model,
         class: vehicle.vehicle_class,
         passengers: vehicle.passengers,
-        id: index
+        id: `${index} ${vehicle.name}`
       };
     });
     return vehiclesToRender;
@@ -146,7 +154,9 @@ class App extends Component {
           </p>
         </aside>
         <main>
-          <Header favorite={this.state.favorites}/>
+          <Header 
+            favorite={this.state.favorites}
+            showFaves={this.showFaves}/>
           <Controls 
             getData= {this.getData}
             getPlanetData= {this.getPlanetData}

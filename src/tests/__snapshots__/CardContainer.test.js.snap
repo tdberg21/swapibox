@@ -4,7 +4,26 @@ exports[`CARD CONTAINER TESTS matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <CardContainer />,
+  Symbol(enzyme.__unrendered__): <CardContainer
+    cards={
+        Array [
+            Object {
+              "class": "wheeled",
+              "id": 0,
+              "model": "Digger Crawler",
+              "name": "Sand Crawler",
+              "passengers": "30",
+            },
+            Object {
+              "class": "repulsorcraft",
+              "id": 1,
+              "model": "T-16 skyhopper",
+              "name": "T-16 skyhopper",
+              "passengers": "1",
+            },
+          ]
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,10 +36,73 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "CardContainer",
+      "children": Array [
+        <Card
+          addToFaves={undefined}
+          info={
+                    Object {
+                              "class": "wheeled",
+                              "id": 0,
+                              "model": "Digger Crawler",
+                              "name": "Sand Crawler",
+                              "passengers": "30",
+                            }
+          }
+/>,
+        <Card
+          addToFaves={undefined}
+          info={
+                    Object {
+                              "class": "repulsorcraft",
+                              "id": 1,
+                              "model": "T-16 skyhopper",
+                              "name": "T-16 skyhopper",
+                              "passengers": "1",
+                            }
+          }
+/>,
+      ],
+      "className": "card-container",
     },
     "ref": null,
-    "rendered": "CardContainer",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "addToFaves": undefined,
+          "info": Object {
+            "class": "wheeled",
+            "id": 0,
+            "model": "Digger Crawler",
+            "name": "Sand Crawler",
+            "passengers": "30",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "addToFaves": undefined,
+          "info": Object {
+            "class": "repulsorcraft",
+            "id": 1,
+            "model": "T-16 skyhopper",
+            "name": "T-16 skyhopper",
+            "passengers": "1",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +111,73 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "CardContainer",
+        "children": Array [
+          <Card
+            addToFaves={undefined}
+            info={
+                        Object {
+                                    "class": "wheeled",
+                                    "id": 0,
+                                    "model": "Digger Crawler",
+                                    "name": "Sand Crawler",
+                                    "passengers": "30",
+                                  }
+            }
+/>,
+          <Card
+            addToFaves={undefined}
+            info={
+                        Object {
+                                    "class": "repulsorcraft",
+                                    "id": 1,
+                                    "model": "T-16 skyhopper",
+                                    "name": "T-16 skyhopper",
+                                    "passengers": "1",
+                                  }
+            }
+/>,
+        ],
+        "className": "card-container",
       },
       "ref": null,
-      "rendered": "CardContainer",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "addToFaves": undefined,
+            "info": Object {
+              "class": "wheeled",
+              "id": 0,
+              "model": "Digger Crawler",
+              "name": "Sand Crawler",
+              "passengers": "30",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "addToFaves": undefined,
+            "info": Object {
+              "class": "repulsorcraft",
+              "id": 1,
+              "model": "T-16 skyhopper",
+              "name": "T-16 skyhopper",
+              "passengers": "1",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],

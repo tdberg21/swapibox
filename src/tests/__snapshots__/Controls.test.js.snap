@@ -1,10 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CONTROLS TESTS matches the snapshot 1`] = `
-ShallowWrapper {
+ReactWrapper {
   "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Controls />,
+  Symbol(enzyme.__unrendered__): <Controls
+    getData={[Function]}
+    getPlanetData={[Function]}
+    getVehicleData={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -12,75 +15,61 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
+  Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": Array [
-        <button>
-          People
-</button>,
-        <button>
-          Planets
-</button>,
-        <button>
-          Vehicles
-</button>,
-      ],
+      "getData": [Function],
+      "getPlanetData": [Function],
+      "getVehicleData": [Function],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "People",
-        },
-        "ref": null,
-        "rendered": "People",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Planets",
-        },
-        "ref": null,
-        "rendered": "Planets",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Vehicles",
-        },
-        "ref": null,
-        "rendered": "Vehicles",
-        "type": "button",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
+    "rendered": Object {
+      "instance": <div>
+        <button
+                title="people"
+                class="people-button"
+        >
+                People
+        </button>
+        <button
+                title="planets"
+                class="planet-button"
+        >
+                Planets
+        </button>
+        <button
+                title="vehicles"
+                class="vehicle-button"
+        >
+                Vehicles
+        </button>
+</div>,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <button>
+          <button
+            className="people-button"
+            onClick={[Function]}
+            title="people"
+>
             People
 </button>,
-          <button>
+          <button
+            className="planet-button"
+            onClick={[Function]}
+            title="planets"
+>
             Planets
 </button>,
-          <button>
+          <button
+            className="vehicle-button"
+            onClick={[Function]}
+            title="vehicles"
+>
             Vehicles
 </button>,
         ],
@@ -88,40 +77,201 @@ ShallowWrapper {
       "ref": null,
       "rendered": Array [
         Object {
-          "instance": null,
+          "instance": <button
+            title="people"
+            class="people-button"
+>
+            People
+</button>,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": "People",
+            "className": "people-button",
+            "onClick": [Function],
+            "title": "people",
           },
           "ref": null,
-          "rendered": "People",
+          "rendered": Array [
+            "People",
+          ],
           "type": "button",
         },
         Object {
-          "instance": null,
+          "instance": <button
+            title="planets"
+            class="planet-button"
+>
+            Planets
+</button>,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": "Planets",
+            "className": "planet-button",
+            "onClick": [Function],
+            "title": "planets",
           },
           "ref": null,
-          "rendered": "Planets",
+          "rendered": Array [
+            "Planets",
+          ],
           "type": "button",
         },
         Object {
-          "instance": null,
+          "instance": <button
+            title="vehicles"
+            class="vehicle-button"
+>
+            Vehicles
+</button>,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": "Vehicles",
+            "className": "vehicle-button",
+            "onClick": [Function],
+            "title": "vehicles",
           },
           "ref": null,
-          "rendered": "Vehicles",
+          "rendered": Array [
+            "Vehicles",
+          ],
           "type": "button",
         },
       ],
       "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "getData": [Function],
+        "getPlanetData": [Function],
+        "getVehicleData": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div>
+          <button
+                    title="people"
+                    class="people-button"
+          >
+                    People
+          </button>
+          <button
+                    title="planets"
+                    class="planet-button"
+          >
+                    Planets
+          </button>
+          <button
+                    title="vehicles"
+                    class="vehicle-button"
+          >
+                    Vehicles
+          </button>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="people-button"
+              onClick={[Function]}
+              title="people"
+>
+              People
+</button>,
+            <button
+              className="planet-button"
+              onClick={[Function]}
+              title="planets"
+>
+              Planets
+</button>,
+            <button
+              className="vehicle-button"
+              onClick={[Function]}
+              title="vehicles"
+>
+              Vehicles
+</button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <button
+              title="people"
+              class="people-button"
+>
+              People
+</button>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "People",
+              "className": "people-button",
+              "onClick": [Function],
+              "title": "people",
+            },
+            "ref": null,
+            "rendered": Array [
+              "People",
+            ],
+            "type": "button",
+          },
+          Object {
+            "instance": <button
+              title="planets"
+              class="planet-button"
+>
+              Planets
+</button>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Planets",
+              "className": "planet-button",
+              "onClick": [Function],
+              "title": "planets",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Planets",
+            ],
+            "type": "button",
+          },
+          Object {
+            "instance": <button
+              title="vehicles"
+              class="vehicle-button"
+>
+              Vehicles
+</button>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Vehicles",
+              "className": "vehicle-button",
+              "onClick": [Function],
+              "title": "vehicles",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Vehicles",
+            ],
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

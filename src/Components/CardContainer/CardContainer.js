@@ -8,7 +8,7 @@ const CardContainer = ({ cards, addToFaves }) => {
     return (
       <Card 
         info={item}
-        key={cards.length}
+        key={item.id}
         addToFaves={addToFaves} 
       />
     );

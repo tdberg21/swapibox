@@ -10,20 +10,20 @@ const Card = (props) => {
         <p>species: {props.info.species} </p>
         <p>homeworld: {props.info.homeworld}</p>
         <p>homeworld population:{props.info.population}</p>
-        <button onClick={() => props.addToFaves(props.info.id)}>Favorite</button>
+        <button 
+          onClick={() => props.addToFaves(props.info.id)}
+          className="favorite-button">
+          Favorite
+        </button>
       </div>
     );
   } 
   
   if (props.info.terrain) {
-    if (props.info.residents === undefined) {
-      return
-    }
-    else {
-      const residentsToDisplay = props.info.residents.map((resident, i) => {
-        <li>resident: {resident}</li>}
-    )
-      
+    const residentsToDisplay = props.info.residents.map((resident, index) => {
+      return (<li key={index}>resident: {resident}</li>);
+    });
+    
     return (
       <div>
         <h5>{props.info.planet}</h5>
@@ -34,9 +34,7 @@ const Card = (props) => {
         <button onClick={() => props.addToFaves(props.info.id)}>Favorite</button>
       </div>
     );
-  }
-    
-} 
+  } 
    
   if (props.info.model) {
     return (
@@ -47,7 +45,7 @@ const Card = (props) => {
         <p>passengers:{props.info.passengers}</p>
         <button onClick={() => props.addToFaves(props.info.id)}>Favorite</button>
       </div>
-    )
+    );
   }
 };
 
@@ -55,7 +53,8 @@ Card.propTypes = {
   name: PropTypes.string,
   species: PropTypes.string,
   homeWorld: PropTypes.string,
-  homePop: PropTypes.number
+  homePop: PropTypes.number,
+  info: PropTypes.object
 };
 
 export default Card;
