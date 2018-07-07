@@ -1,19 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Header extends Component {
-  constructor(props) {
-    super(props);
+const Header = (props) => {
+  return (
+    <div className = "header">
+      <button
+        onClick={props.showFaves}
+      >
+      View Favorites {props.favorite.length}
+      </button>
+    </div>
+  );
+};
 
-    this.state = {
-      favorites: props.favorites
-    };
-  }
 
-  render() {
-    return (
-      <div className = "header">
-        <button>View Favorites 0</button>
-      </div>
-    );
-  }
-}
+export default Header;
