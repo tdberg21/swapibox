@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 
 export default class Header extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      favorites: []
+      favorites: props.favorites
     };
   }
 
   render() {
     return (
       <div className = "header">
-        <button>View Favorites {this.state.favorites.length}</button>
+        <button>View Favorites 0</button>
       </div>
     );
   }

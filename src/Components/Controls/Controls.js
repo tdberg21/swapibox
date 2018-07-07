@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Controls = ({ getData, getPlanetData }) => {
+const Controls = ({ getData, getPlanetData, getVehicleData }) => {
 
   return (
     <div>
@@ -18,7 +18,7 @@ const Controls = ({ getData, getPlanetData }) => {
       Planets
       </button>
       <button
-        onClick={(event) => getPlanetData(event)}
+        onClick={(event) => getVehicleData(event)}
         title="vehicles"
       >
       Vehicles

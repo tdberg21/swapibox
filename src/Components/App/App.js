@@ -13,12 +13,24 @@ class App extends Component {
     
     this.state = {
       cards: [],
+      favorites: [],
       scrollTextMovie: {}
     };
 
     this.getData = this.getData.bind(this);
   }
-  
+  addToFaves = (key) => {
+    console.log(key);
+    let cardToFave;
+    this.state.cards.forEach(card => {
+      if (card.id === key) {
+        cardToFave = card
+    }})
+    this.setState({
+      favorites: [...this.state.favorites, cardToFave]
+    })
+  }
+
   async componentDidMount() {
     let number = generateRandomNumber() + 1;
     let category = 'films';
@@ -56,7 +68,7 @@ class App extends Component {
     const unresolvedPromises = data.map(person => (
       fetch(person.species)
         .then(data => data.json())
-        .then(results => ({ ...person, species: results.name }))
+        .then(results => ({ name: person.name, homeworld: person.homeworld, population: person.population, species: results.name, id: Date.now() }))
     ));
     return Promise.all(unresolvedPromises);
   }
@@ -64,44 +76,64 @@ class App extends Component {
   getPlanetData = (event) => {
     var category = event.target.title;
     const url = `https://swapi.co/api/${category}/`;
-    fetch(url)
+    return fetch(url)
       .then(data => data.json())
       .then(planets => this.cleanPlanetData(planets.results))
       .then(cleanPlanets =>  {
         return cleanPlanets.map(planet => {
           this.fetchResidents(planet.residents)
-          .then(names => planet.residents = names)
-          console.log(planet)
+            .then(names => planet.residents = names)
           return planet
         });
       }
-    )
-      .then(results => this.setState({cards: results}));
-      // .catch(error => console.log(error));
+      )
+      .then(results => this.setState({cards: results}))
+      .catch(error => alert(error));
   }
 
   cleanPlanetData = (planets) => {
     const cleanPlanets = planets.map(planet => {
-        return {planet: planet.name,
-         population: planet.population,
-         terrain: planet.terrain,
-         climate: planet.climate,
-        residents: planet.residents};
+      return {planet: planet.name,
+        population: planet.population,
+        terrain: planet.terrain,
+        climate: planet.climate,
+        residents: planet.residents, 
+        id: Date.now()};
     });
     return cleanPlanets;
   }
 
   fetchResidents = (data) => {
     const unresolvedPromises = data.map(resident => {
-        return fetch(resident)
-          .then(response => response.json())
-          .then(resident => resident.name)
-          .catch(error => console.log(error))
-      });
+      return fetch(resident)
+        .then(response => response.json())
+        .then(resident => resident.name)
+        .catch(error => console.log(error));
+    });
     return Promise.all(unresolvedPromises);
   }
 
+  getVehicleData = (event) => {
+    var category = event.target.title;
+    const url = `https://swapi.co/api/${category}/`;
+    fetch(url)
+      .then(response => response.json())
+      .then(parsedData => this.cleanVehicleData(parsedData.results))
+      .then(cleanData => this.setState({cards: cleanData}))
+  }
 
+  cleanVehicleData = (vehicles) => {
+    const vehiclesToRender = vehicles.map((vehicle, index) => {
+      return {
+        name: vehicle.name,
+        model: vehicle.model,
+        class: vehicle.vehicle_class,
+        passengers: vehicle.passengers,
+        id: index
+      };
+    });
+    return vehiclesToRender;
+  }
 
   render() {
     return (
@@ -114,11 +146,16 @@ class App extends Component {
           </p>
         </aside>
         <main>
-          <Header />
+          <Header favorite={this.state.favorites}/>
           <Controls 
             getData= {this.getData}
-            getPlanetData= {this.getPlanetData}/>
-          <CardContainer cards= {this.state.cards}/>
+            getPlanetData= {this.getPlanetData}
+            getVehicleData= {this.getVehicleData}
+          />
+          <CardContainer 
+            cards= {this.state.cards}
+            addToFaves= {this.addToFaves}
+          />
         </main>
       </div>
     );
