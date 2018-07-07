@@ -3,17 +3,22 @@ import Card from '../Card/Card.js';
 import './CardContainer.css'
 import PropTypes from 'prop-types';
 
-const CardContainer = ({ cards }) => {
-  const cardsToRender = cards.map((item, index) => {
+const CardContainer = ({ cards, addToFaves }) => {
+  const cardsToRender = cards.map(item => {
     return (
       <Card 
         info={item}
-        key={index} />
+        key={cards.length}
+        addToFaves={addToFaves} 
+      />
     );
   });
   
   return (
-    <div className="card-container">{cardsToRender}</div>
+    <div 
+      className="card-container">
+      {cardsToRender}
+    </div>
   );
 };
 

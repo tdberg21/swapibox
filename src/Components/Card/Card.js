@@ -10,12 +10,20 @@ const Card = (props) => {
         <p>species: {props.info.species} </p>
         <p>homeworld: {props.info.homeworld}</p>
         <p>homeworld population:{props.info.population}</p>
-        <button>Favorite</button>
+        <button onClick={() => props.addToFaves(props.info.id)}>Favorite</button>
       </div>
     );
   } 
+  
   if (props.info.terrain) {
-    const residentsToDisplay = props.info.residents.map(resident => <li>{resident}</li>)
+    if (props.info.residents === undefined) {
+      return
+    }
+    else {
+      const residentsToDisplay = props.info.residents.map((resident, i) => {
+        <li>resident: {resident}</li>}
+    )
+      
     return (
       <div>
         <h5>{props.info.planet}</h5>
@@ -23,10 +31,13 @@ const Card = (props) => {
         <p>terrain: {props.info.terrain}</p>
         <p>population:{props.info.population}</p>
         <ul>{residentsToDisplay}</ul>
-        <button>Favorite</button>
+        <button onClick={() => props.addToFaves(props.info.id)}>Favorite</button>
       </div>
     );
-  } 
+  }
+    
+} 
+   
   if (props.info.model) {
     return (
       <div>
@@ -34,7 +45,7 @@ const Card = (props) => {
         <p>model: {props.info.model} </p>
         <p>class: {props.info.class}</p>
         <p>passengers:{props.info.passengers}</p>
-        <button>Favorite</button>
+        <button onClick={() => props.addToFaves(props.info.id)}>Favorite</button>
       </div>
     )
   }
