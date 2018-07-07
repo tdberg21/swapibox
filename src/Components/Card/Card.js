@@ -10,7 +10,9 @@ const Card = (props) => {
         <p>species: {props.info.species} </p>
         <p>homeworld: {props.info.homeworld}</p>
         <p>homeworld population:{props.info.population}</p>
-        <button onClick={() => props.addToFaves(props.info.id)}>Favorite</button>
+        <button 
+        onClick={() => props.addToFaves(props.info.id)}
+        className="favorite-button">Favorite</button>
       </div>
     );
   } 

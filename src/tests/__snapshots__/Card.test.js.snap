@@ -1,0 +1,819 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CARD TESTS matches the snapshot when a people are passed down 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    addToFaves={[Function]}
+    info={
+        Object {
+            "homeworld": "Tatooine",
+            "id": 1530987621630,
+            "name": "Luke Skywalker",
+            "population": "200000",
+            "species": "Human",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h5>
+          Luke Skywalker
+</h5>,
+        <p>
+          species: 
+          Human
+           
+</p>,
+        <p>
+          homeworld: 
+          Tatooine
+</p>,
+        <p>
+          homeworld population:
+          200000
+</p>,
+        <button
+          className="favorite-button"
+          onClick={[Function]}
+>
+          Favorite
+</button>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Luke Skywalker",
+        },
+        "ref": null,
+        "rendered": "Luke Skywalker",
+        "type": "h5",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "species: ",
+            "Human",
+            " ",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "species: ",
+          "Human",
+          " ",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "homeworld: ",
+            "Tatooine",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "homeworld: ",
+          "Tatooine",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "homeworld population:",
+            "200000",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "homeworld population:",
+          "200000",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Favorite",
+          "className": "favorite-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Favorite",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h5>
+            Luke Skywalker
+</h5>,
+          <p>
+            species: 
+            Human
+             
+</p>,
+          <p>
+            homeworld: 
+            Tatooine
+</p>,
+          <p>
+            homeworld population:
+            200000
+</p>,
+          <button
+            className="favorite-button"
+            onClick={[Function]}
+>
+            Favorite
+</button>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Luke Skywalker",
+          },
+          "ref": null,
+          "rendered": "Luke Skywalker",
+          "type": "h5",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "species: ",
+              "Human",
+              " ",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "species: ",
+            "Human",
+            " ",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "homeworld: ",
+              "Tatooine",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "homeworld: ",
+            "Tatooine",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "homeworld population:",
+              "200000",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "homeworld population:",
+            "200000",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Favorite",
+            "className": "favorite-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Favorite",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`CARD TESTS matches the snapshot when a vehicle is passed down 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    addToFaves={[Function]}
+    info={
+        Object {
+            "climate": "temperate",
+            "id": 1530987442516,
+            "planet": "Alderaan",
+            "population": "2000000000",
+            "residents": Array [
+              "Leia Organa",
+              "Bail Prestor Organa",
+              "Raymus Antilles",
+            ],
+            "terrain": "grasslands, mountains",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h5>
+          Alderaan
+</h5>,
+        <p>
+          climate: 
+          temperate
+           
+</p>,
+        <p>
+          terrain: 
+          grasslands, mountains
+</p>,
+        <p>
+          population:
+          2000000000
+</p>,
+        <ul>
+          
+</ul>,
+        <button
+          onClick={[Function]}
+>
+          Favorite
+</button>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Alderaan",
+        },
+        "ref": null,
+        "rendered": "Alderaan",
+        "type": "h5",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "climate: ",
+            "temperate",
+            " ",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "climate: ",
+          "temperate",
+          " ",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "terrain: ",
+            "grasslands, mountains",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "terrain: ",
+          "grasslands, mountains",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "population:",
+            "2000000000",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "population:",
+          "2000000000",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            undefined,
+            undefined,
+            undefined,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          undefined,
+          undefined,
+          undefined,
+        ],
+        "type": "ul",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Favorite",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Favorite",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h5>
+            Alderaan
+</h5>,
+          <p>
+            climate: 
+            temperate
+             
+</p>,
+          <p>
+            terrain: 
+            grasslands, mountains
+</p>,
+          <p>
+            population:
+            2000000000
+</p>,
+          <ul>
+            
+</ul>,
+          <button
+            onClick={[Function]}
+>
+            Favorite
+</button>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Alderaan",
+          },
+          "ref": null,
+          "rendered": "Alderaan",
+          "type": "h5",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "climate: ",
+              "temperate",
+              " ",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "climate: ",
+            "temperate",
+            " ",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "terrain: ",
+              "grasslands, mountains",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "terrain: ",
+            "grasslands, mountains",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "population:",
+              "2000000000",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "population:",
+            "2000000000",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              undefined,
+              undefined,
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+            undefined,
+            undefined,
+          ],
+          "type": "ul",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Favorite",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Favorite",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`CARD TESTS matches the snapshot when a vehicle is passed down 2`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    addToFaves={[Function]}
+    info={
+        Object {
+            "class": "wheeled",
+            "id": 0,
+            "model": "Digger Crawler",
+            "name": "Sand Crawler",
+            "passengers": "30",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h5>
+          Sand Crawler
+</h5>,
+        <p>
+          model: 
+          Digger Crawler
+           
+</p>,
+        <p>
+          class: 
+          wheeled
+</p>,
+        <p>
+          passengers:
+          30
+</p>,
+        <button
+          onClick={[Function]}
+>
+          Favorite
+</button>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Sand Crawler",
+        },
+        "ref": null,
+        "rendered": "Sand Crawler",
+        "type": "h5",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "model: ",
+            "Digger Crawler",
+            " ",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "model: ",
+          "Digger Crawler",
+          " ",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "class: ",
+            "wheeled",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "class: ",
+          "wheeled",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "passengers:",
+            "30",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "passengers:",
+          "30",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Favorite",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Favorite",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h5>
+            Sand Crawler
+</h5>,
+          <p>
+            model: 
+            Digger Crawler
+             
+</p>,
+          <p>
+            class: 
+            wheeled
+</p>,
+          <p>
+            passengers:
+            30
+</p>,
+          <button
+            onClick={[Function]}
+>
+            Favorite
+</button>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Sand Crawler",
+          },
+          "ref": null,
+          "rendered": "Sand Crawler",
+          "type": "h5",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "model: ",
+              "Digger Crawler",
+              " ",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "model: ",
+            "Digger Crawler",
+            " ",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "class: ",
+              "wheeled",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "class: ",
+            "wheeled",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "passengers:",
+              "30",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "passengers:",
+            "30",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Favorite",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Favorite",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
