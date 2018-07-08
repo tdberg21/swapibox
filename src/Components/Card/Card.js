@@ -1,17 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Card.css';
 
 
 const Card = (props) => {
+
   if (props.info.species) {
     return (
-      <div>
+      <div className="card">
         <h5>{props.info.name}</h5>
-        <p>species: {props.info.species} </p>
-        <p>homeworld: {props.info.homeworld}</p>
-        <p>homeworld population:{props.info.population}</p>
+        <p>Species: {props.info.species} </p>
+        <p>Homeworld: {props.info.homeworld}</p>
+        <p>Homeworld population:{props.info.population}</p>
         <button 
-          onClick={() => props.addToFaves(props.info.id)}
+          onClick={(event) => props.checkForFaves(props.info.id, event)}
           className="favorite-button">
           Favorite
         </button>
@@ -21,29 +23,39 @@ const Card = (props) => {
   
   if (props.info.terrain) {
     const residentsToDisplay = props.info.residents.map((resident, index) => {
-      return (<li key={index}>resident: {resident}</li>);
+      return (<li key={index}>{resident}</li>);
     });
     
     return (
-      <div>
-        <h5>{props.info.planet}</h5>
-        <p>climate: {props.info.climate} </p>
-        <p>terrain: {props.info.terrain}</p>
-        <p>population:{props.info.population}</p>
-        <ul>{residentsToDisplay}</ul>
-        <button onClick={() => props.addToFaves(props.info.id)}>Favorite</button>
+      <div className="card">
+        <h5>{props.info.name}</h5>
+        <p>Climate: {props.info.climate} </p>
+        <p>Terrain: {props.info.terrain}</p>
+        <p>Population:{props.info.population}</p>
+        <ul>Residents:{residentsToDisplay}</ul>
+        <button 
+          onClick={(event) => props.checkForFaves(props.info.id, event)}
+          className="favorite-button"
+        >
+        Favorite
+        </button>
       </div>
     );
   } 
    
   if (props.info.model) {
     return (
-      <div>
+      <div className="card">
         <h5>{props.info.name}</h5>
-        <p>model: {props.info.model} </p>
-        <p>class: {props.info.class}</p>
-        <p>passengers:{props.info.passengers}</p>
-        <button onClick={() => props.addToFaves(props.info.id)}>Favorite</button>
+        <p>Model: {props.info.model} </p>
+        <p>Class: {props.info.class}</p>
+        <p>Passengers:{props.info.passengers}</p>
+        <button 
+          onClick={(event) => props.checkForFaves(props.info.id, event)}
+          className="favorite-button"
+        >
+        Favorite
+        </button>
       </div>
     );
   }
@@ -54,7 +66,8 @@ Card.propTypes = {
   species: PropTypes.string,
   homeWorld: PropTypes.string,
   homePop: PropTypes.number,
-  info: PropTypes.object
+  info: PropTypes.object,
+  checkForFaves: PropTypes.func
 };
 
 export default Card;

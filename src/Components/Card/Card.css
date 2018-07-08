@@ -1,0 +1,29 @@
+.card {
+  border: 1px solid black;
+  margin: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  width: 29%;
+  background-color: lightgrey;
+}
+
+.favorite-button {
+  border-color: yellow;
+  color: yellow;
+  background-color: #333;
+}
+
+.favorite {
+  background-color: chartreuse;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  text-overflow: ellipsis;
+  padding-right: 5px;
+}

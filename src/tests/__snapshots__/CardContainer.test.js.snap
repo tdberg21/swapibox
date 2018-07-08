@@ -38,7 +38,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Card
-          addToFaves={undefined}
+          checkForFaves={undefined}
           info={
                     Object {
                               "class": "wheeled",
@@ -50,7 +50,7 @@ ShallowWrapper {
           }
 />,
         <Card
-          addToFaves={undefined}
+          checkForFaves={undefined}
           info={
                     Object {
                               "class": "repulsorcraft",
@@ -68,10 +68,10 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "2",
+        "key": "0",
         "nodeType": "function",
         "props": Object {
-          "addToFaves": undefined,
+          "checkForFaves": undefined,
           "info": Object {
             "class": "wheeled",
             "id": 0,
@@ -86,10 +86,10 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "2",
+        "key": "1",
         "nodeType": "function",
         "props": Object {
-          "addToFaves": undefined,
+          "checkForFaves": undefined,
           "info": Object {
             "class": "repulsorcraft",
             "id": 1,
@@ -113,7 +113,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
-            addToFaves={undefined}
+            checkForFaves={undefined}
             info={
                         Object {
                                     "class": "wheeled",
@@ -125,7 +125,7 @@ ShallowWrapper {
             }
 />,
           <Card
-            addToFaves={undefined}
+            checkForFaves={undefined}
             info={
                         Object {
                                     "class": "repulsorcraft",
@@ -143,10 +143,10 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "2",
+          "key": "0",
           "nodeType": "function",
           "props": Object {
-            "addToFaves": undefined,
+            "checkForFaves": undefined,
             "info": Object {
               "class": "wheeled",
               "id": 0,
@@ -161,10 +161,10 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "2",
+          "key": "1",
           "nodeType": "function",
           "props": Object {
-            "addToFaves": undefined,
+            "checkForFaves": undefined,
             "info": Object {
               "class": "repulsorcraft",
               "id": 1,

@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
-    addToFaves={[Function]}
+    checkForFaves={[Function]}
     info={
         Object {
             "homeworld": "Tatooine",
@@ -33,16 +33,16 @@ ShallowWrapper {
           Luke Skywalker
 </h5>,
         <p>
-          species: 
+          Species: 
           Human
            
 </p>,
         <p>
-          homeworld: 
+          Homeworld: 
           Tatooine
 </p>,
         <p>
-          homeworld population:
+          Homeworld population:
           200000
 </p>,
         <button
@@ -52,6 +52,7 @@ ShallowWrapper {
           Favorite
 </button>,
       ],
+      "className": "card",
     },
     "ref": null,
     "rendered": Array [
@@ -72,14 +73,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "species: ",
+            "Species: ",
             "Human",
             " ",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "species: ",
+          "Species: ",
           "Human",
           " ",
         ],
@@ -91,13 +92,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "homeworld: ",
+            "Homeworld: ",
             "Tatooine",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "homeworld: ",
+          "Homeworld: ",
           "Tatooine",
         ],
         "type": "p",
@@ -108,13 +109,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "homeworld population:",
+            "Homeworld population:",
             "200000",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "homeworld population:",
+          "Homeworld population:",
           "200000",
         ],
         "type": "p",
@@ -146,16 +147,16 @@ ShallowWrapper {
             Luke Skywalker
 </h5>,
           <p>
-            species: 
+            Species: 
             Human
              
 </p>,
           <p>
-            homeworld: 
+            Homeworld: 
             Tatooine
 </p>,
           <p>
-            homeworld population:
+            Homeworld population:
             200000
 </p>,
           <button
@@ -165,6 +166,7 @@ ShallowWrapper {
             Favorite
 </button>,
         ],
+        "className": "card",
       },
       "ref": null,
       "rendered": Array [
@@ -185,14 +187,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "species: ",
+              "Species: ",
               "Human",
               " ",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "species: ",
+            "Species: ",
             "Human",
             " ",
           ],
@@ -204,13 +206,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "homeworld: ",
+              "Homeworld: ",
               "Tatooine",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "homeworld: ",
+            "Homeworld: ",
             "Tatooine",
           ],
           "type": "p",
@@ -221,13 +223,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "homeworld population:",
+              "Homeworld population:",
               "200000",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "homeworld population:",
+            "Homeworld population:",
             "200000",
           ],
           "type": "p",
@@ -264,7 +266,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
-    addToFaves={[Function]}
+    checkForFaves={[Function]}
     info={
         Object {
             "climate": "temperate",
@@ -293,31 +295,40 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h5>
-          Alderaan
-</h5>,
+        <h5 />,
         <p>
-          climate: 
+          Climate: 
           temperate
            
 </p>,
         <p>
-          terrain: 
+          Terrain: 
           grasslands, mountains
 </p>,
         <p>
-          population:
+          Population:
           2000000000
 </p>,
         <ul>
-          
+          Residents:
+          <li>
+                    Leia Organa
+          </li>
+          <li>
+                    Bail Prestor Organa
+          </li>
+          <li>
+                    Raymus Antilles
+          </li>
 </ul>,
         <button
+          className="favorite-button"
           onClick={[Function]}
 >
           Favorite
 </button>,
       ],
+      "className": "card",
     },
     "ref": null,
     "rendered": Array [
@@ -326,10 +337,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Alderaan",
+          "children": undefined,
         },
         "ref": null,
-        "rendered": "Alderaan",
+        "rendered": null,
         "type": "h5",
       },
       Object {
@@ -338,14 +349,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "climate: ",
+            "Climate: ",
             "temperate",
             " ",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "climate: ",
+          "Climate: ",
           "temperate",
           " ",
         ],
@@ -357,13 +368,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "terrain: ",
+            "Terrain: ",
             "grasslands, mountains",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "terrain: ",
+          "Terrain: ",
           "grasslands, mountains",
         ],
         "type": "p",
@@ -374,13 +385,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "population:",
+            "Population:",
             "2000000000",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "population:",
+          "Population:",
           "2000000000",
         ],
         "type": "p",
@@ -391,16 +402,56 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            undefined,
-            undefined,
-            undefined,
+            "Residents:",
+            Array [
+              <li>
+                Leia Organa
+</li>,
+              <li>
+                Bail Prestor Organa
+</li>,
+              <li>
+                Raymus Antilles
+</li>,
+            ],
           ],
         },
         "ref": null,
         "rendered": Array [
-          undefined,
-          undefined,
-          undefined,
+          "Residents:",
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Leia Organa",
+            },
+            "ref": null,
+            "rendered": "Leia Organa",
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Bail Prestor Organa",
+            },
+            "ref": null,
+            "rendered": "Bail Prestor Organa",
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Raymus Antilles",
+            },
+            "ref": null,
+            "rendered": "Raymus Antilles",
+            "type": "li",
+          },
         ],
         "type": "ul",
       },
@@ -410,6 +461,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Favorite",
+          "className": "favorite-button",
           "onClick": [Function],
         },
         "ref": null,
@@ -426,31 +478,40 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h5>
-            Alderaan
-</h5>,
+          <h5 />,
           <p>
-            climate: 
+            Climate: 
             temperate
              
 </p>,
           <p>
-            terrain: 
+            Terrain: 
             grasslands, mountains
 </p>,
           <p>
-            population:
+            Population:
             2000000000
 </p>,
           <ul>
-            
+            Residents:
+            <li>
+                        Leia Organa
+            </li>
+            <li>
+                        Bail Prestor Organa
+            </li>
+            <li>
+                        Raymus Antilles
+            </li>
 </ul>,
           <button
+            className="favorite-button"
             onClick={[Function]}
 >
             Favorite
 </button>,
         ],
+        "className": "card",
       },
       "ref": null,
       "rendered": Array [
@@ -459,10 +520,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Alderaan",
+            "children": undefined,
           },
           "ref": null,
-          "rendered": "Alderaan",
+          "rendered": null,
           "type": "h5",
         },
         Object {
@@ -471,14 +532,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "climate: ",
+              "Climate: ",
               "temperate",
               " ",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "climate: ",
+            "Climate: ",
             "temperate",
             " ",
           ],
@@ -490,13 +551,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "terrain: ",
+              "Terrain: ",
               "grasslands, mountains",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "terrain: ",
+            "Terrain: ",
             "grasslands, mountains",
           ],
           "type": "p",
@@ -507,13 +568,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "population:",
+              "Population:",
               "2000000000",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "population:",
+            "Population:",
             "2000000000",
           ],
           "type": "p",
@@ -524,16 +585,56 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              undefined,
-              undefined,
-              undefined,
+              "Residents:",
+              Array [
+                <li>
+                  Leia Organa
+</li>,
+                <li>
+                  Bail Prestor Organa
+</li>,
+                <li>
+                  Raymus Antilles
+</li>,
+              ],
             ],
           },
           "ref": null,
           "rendered": Array [
-            undefined,
-            undefined,
-            undefined,
+            "Residents:",
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Leia Organa",
+              },
+              "ref": null,
+              "rendered": "Leia Organa",
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Bail Prestor Organa",
+              },
+              "ref": null,
+              "rendered": "Bail Prestor Organa",
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Raymus Antilles",
+              },
+              "ref": null,
+              "rendered": "Raymus Antilles",
+              "type": "li",
+            },
           ],
           "type": "ul",
         },
@@ -543,6 +644,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Favorite",
+            "className": "favorite-button",
             "onClick": [Function],
           },
           "ref": null,
@@ -568,7 +670,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
-    addToFaves={[Function]}
+    checkForFaves={[Function]}
     info={
         Object {
             "class": "wheeled",
@@ -596,24 +698,26 @@ ShallowWrapper {
           Sand Crawler
 </h5>,
         <p>
-          model: 
+          Model: 
           Digger Crawler
            
 </p>,
         <p>
-          class: 
+          Class: 
           wheeled
 </p>,
         <p>
-          passengers:
+          Passengers:
           30
 </p>,
         <button
+          className="favorite-button"
           onClick={[Function]}
 >
           Favorite
 </button>,
       ],
+      "className": "card",
     },
     "ref": null,
     "rendered": Array [
@@ -634,14 +738,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "model: ",
+            "Model: ",
             "Digger Crawler",
             " ",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "model: ",
+          "Model: ",
           "Digger Crawler",
           " ",
         ],
@@ -653,13 +757,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "class: ",
+            "Class: ",
             "wheeled",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "class: ",
+          "Class: ",
           "wheeled",
         ],
         "type": "p",
@@ -670,13 +774,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "passengers:",
+            "Passengers:",
             "30",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "passengers:",
+          "Passengers:",
           "30",
         ],
         "type": "p",
@@ -687,6 +791,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Favorite",
+          "className": "favorite-button",
           "onClick": [Function],
         },
         "ref": null,
@@ -707,24 +812,26 @@ ShallowWrapper {
             Sand Crawler
 </h5>,
           <p>
-            model: 
+            Model: 
             Digger Crawler
              
 </p>,
           <p>
-            class: 
+            Class: 
             wheeled
 </p>,
           <p>
-            passengers:
+            Passengers:
             30
 </p>,
           <button
+            className="favorite-button"
             onClick={[Function]}
 >
             Favorite
 </button>,
         ],
+        "className": "card",
       },
       "ref": null,
       "rendered": Array [
@@ -745,14 +852,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "model: ",
+              "Model: ",
               "Digger Crawler",
               " ",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "model: ",
+            "Model: ",
             "Digger Crawler",
             " ",
           ],
@@ -764,13 +871,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "class: ",
+              "Class: ",
               "wheeled",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "class: ",
+            "Class: ",
             "wheeled",
           ],
           "type": "p",
@@ -781,13 +888,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "passengers:",
+              "Passengers:",
               "30",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "passengers:",
+            "Passengers:",
             "30",
           ],
           "type": "p",
@@ -798,6 +905,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Favorite",
+            "className": "favorite-button",
             "onClick": [Function],
           },
           "ref": null,
