@@ -4,7 +4,10 @@ exports[`HEADER TESTS matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Header />,
+  Symbol(enzyme.__unrendered__): <Header
+    favorites="[]"
+    showFaves={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,30 +20,56 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <button>
-        View Favorites 
-        0
+      "children": Array [
+        <h1
+          className="title"
+>
+          SWAPI BOX
+</h1>,
+        <button
+          className="show-faves-button"
+          onClick={[Function]}
+>
+          View Favorites 
+          2
 </button>,
+      ],
       "className": "header",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          "View Favorites ",
-          0,
-        ],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "SWAPI BOX",
+          "className": "title",
+        },
+        "ref": null,
+        "rendered": "SWAPI BOX",
+        "type": "h1",
       },
-      "ref": null,
-      "rendered": Array [
-        "View Favorites ",
-        0,
-      ],
-      "type": "button",
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "View Favorites ",
+            2,
+          ],
+          "className": "show-faves-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          "View Favorites ",
+          2,
+        ],
+        "type": "button",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -49,30 +78,56 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <button>
-          View Favorites 
-          0
+        "children": Array [
+          <h1
+            className="title"
+>
+            SWAPI BOX
+</h1>,
+          <button
+            className="show-faves-button"
+            onClick={[Function]}
+>
+            View Favorites 
+            2
 </button>,
+        ],
         "className": "header",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "View Favorites ",
-            0,
-          ],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "SWAPI BOX",
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": "SWAPI BOX",
+          "type": "h1",
         },
-        "ref": null,
-        "rendered": Array [
-          "View Favorites ",
-          0,
-        ],
-        "type": "button",
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "View Favorites ",
+              2,
+            ],
+            "className": "show-faves-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            "View Favorites ",
+            2,
+          ],
+          "type": "button",
+        },
+      ],
       "type": "div",
     },
   ],

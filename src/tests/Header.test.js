@@ -3,14 +3,17 @@ import Header from '../Components/Header/Header.js';
 import { shallow } from 'enzyme';
 
 
-// describe('HEADER TESTS', () => {
-//   let wrapper;
+describe('HEADER TESTS', () => {
+  let wrapper;
 
-//   beforeEach(() => {
-//     wrapper = shallow(<Header />);
-//   });
+  beforeEach(() => {
+    wrapper = shallow(<Header 
+                        favorites="[]"
+                        showFaves={jest.fn()}
+                      />);
+  });
 
-//   it('matches the snapshot', () => {
-//     expect(wrapper).toMatchSnapshot();
-//   });
-// });
+  it('matches the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+});

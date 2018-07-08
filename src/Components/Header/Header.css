@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.show-faves-button {
+  height: 30px;
+  margin-top: 10px;
+  background-color: #333;
+  border: none;
+  color: yellow;
+}
+
+h1 {
+  margin-left: 50px;
+}

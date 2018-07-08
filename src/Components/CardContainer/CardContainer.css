@@ -1,4 +1,8 @@
 .card-container {
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  overflow: scroll;
+  padding-right: 25px;
+  padding-top: 30px;
 }

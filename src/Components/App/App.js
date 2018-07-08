@@ -16,12 +16,41 @@ class App extends Component {
       favorites: [],
       scrollTextMovie: {}
     };
+  }
 
-    this.getData = this.getData.bind(this);
+  async componentDidMount() {
+    let number = generateRandomNumber() + 1;
+    let category = 'films';
+    const scrollTextMovie = await fetchData(number, category);
+    const scrollTextYear = scrollTextMovie.release_date;
+    await this.setState({
+      scrollTextMovie: {
+        title: scrollTextMovie.title,
+        year: scrollTextYear,
+        text: scrollTextMovie.opening_crawl
+      }
+    });
+  }
+
+  checkForFavorites = (key, event) => {
+    let duplicate = this.state.favorites.find(favorite => {
+      return favorite.id === key;
+    });
+    let button = event.target;
+    if (duplicate) {
+      button.closest('div').classList.remove('favorite');
+      button.innerText = 'favorite';
+      this.removeFromFavorites(key);
+    } else {
+      button.closest('div').classList.add('favorite');
+      button.innerText = 'unfavorite';
+      this.addToFaves(key);
+    }
   }
 
   addToFaves = (key) => {
     let cardToFave;
+   
     this.state.cards.forEach(card => {
       if (card.id === key) {
         cardToFave = card;
@@ -32,22 +61,18 @@ class App extends Component {
     });
   }
 
-  showFaves = () => {
+  removeFromFavorites = (key) => {
+    const newFaves = this.state.favorites.filter(favorite => {
+      return favorite.id !== key;
+    });
     this.setState({
-      cards: this.state.favorites
+      favorites: newFaves
     });
   }
 
-  async componentDidMount() {
-    let number = generateRandomNumber() + 1;
-    let category = 'films';
-    const scrollTextMovie = await fetchData(number, category);
-    await this.setState({
-      scrollTextMovie: {
-        title: scrollTextMovie.title,
-        year: scrollTextMovie.release_date,
-        text: scrollTextMovie.opening_crawl
-      }
+  showFaves = () => {
+    this.setState({
+      cards: this.state.favorites
     });
   }
 
@@ -55,27 +80,33 @@ class App extends Component {
     var category = event.target.title;
     const url = `https://swapi.co/api/${category}/`;
     fetch(url)
-      .then(data => data.json()) 
+      .then(response => response.json()) 
       .then(parsedData => this.fetchHomeWorld(parsedData.results))
       .then(results => this.fetchSpecies(results)) 
       .then(people => this.setState({cards: people}))
       .catch(error => console.log(error));
   }
 
-  fetchHomeWorld = (data) => {
-    const unresolvedPromises = data.map(person => (
+  fetchHomeWorld = (results) => {
+    const unresolvedPromises = results.map(person => (
       fetch(person.homeworld)
-        .then(data => data.json())
+        .then(response => response.json())
         .then(results => ({ ...person, homeworld: results.name, population: results.population }))
     ));
     return Promise.all(unresolvedPromises);
   }
 
   fetchSpecies = (apiData) => {
-    const unresolvedPromises = apiData.map(person => (
+    const unresolvedPromises = apiData.map((person, index) => (
       fetch(person.species)
         .then(response => response.json())
-        .then(results => ({ name: person.name, homeworld: person.homeworld, population: person.population, species: results.name, id: Date.now() }))
+        .then(results => ({ 
+          name: person.name, 
+          homeworld: person.homeworld, 
+          population: person.population, 
+          species: results.name, 
+          id: `${index} ${person.name}` 
+        }))
     ));
     return Promise.all(unresolvedPromises);
   }
@@ -99,8 +130,9 @@ class App extends Component {
   }
 
   cleanPlanetData = (planets) => {
-    const cleanPlanets = planets.map((planet, index) => {
-      return {planet: planet.name,
+    const cleanPlanets = planets.map((planet, index) => { 
+      return {
+        name: planet.name,
         population: planet.population,
         terrain: planet.terrain,
         climate: planet.climate,
@@ -111,13 +143,13 @@ class App extends Component {
     return cleanPlanets;
   }
 
-  fetchResidents = (data) => {
-    const unresolvedPromises = data.map(resident => {
-      return fetch(resident)
+  fetchResidents = (residentsURLs) => {
+    const unresolvedPromises = residentsURLs.map(resident => (
+      fetch(resident)
         .then(response => response.json())
         .then(resident => resident.name)
-        .catch(error => console.log(error));
-    });
+        .catch(error => console.log(error))
+    ));
     return Promise.all(unresolvedPromises);
   }
 
@@ -127,7 +159,7 @@ class App extends Component {
     fetch(url)
       .then(response => response.json())
       .then(parsedData => this.cleanVehicleData(parsedData.results))
-      .then(cleanData => this.setState({cards: cleanData}))
+      .then(cleanData => this.setState({cards: cleanData}));
   }
 
   cleanVehicleData = (vehicles) => {
@@ -155,7 +187,7 @@ class App extends Component {
         </aside>
         <main>
           <Header 
-            favorite={this.state.favorites}
+            favorites={this.state.favorites}
             showFaves={this.showFaves}/>
           <Controls 
             getData= {this.getData}
@@ -164,7 +196,7 @@ class App extends Component {
           />
           <CardContainer 
             cards= {this.state.cards}
-            addToFaves= {this.addToFaves}
+            checkForFaves= {this.checkForFavorites}
           />
         </main>
       </div>

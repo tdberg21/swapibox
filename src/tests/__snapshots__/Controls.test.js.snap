@@ -27,22 +27,24 @@ ReactWrapper {
     },
     "ref": null,
     "rendered": Object {
-      "instance": <div>
+      "instance": <div
+        class="controls-container"
+>
         <button
                 title="people"
-                class="people-button"
+                class="controls-button people-button"
         >
                 People
         </button>
         <button
                 title="planets"
-                class="planet-button"
+                class="controls-button planet-button"
         >
                 Planets
         </button>
         <button
                 title="vehicles"
-                class="vehicle-button"
+                class="controls-button vehicle-button"
         >
                 Vehicles
         </button>
@@ -52,34 +54,35 @@ ReactWrapper {
       "props": Object {
         "children": Array [
           <button
-            className="people-button"
+            className="controls-button people-button"
             onClick={[Function]}
             title="people"
 >
             People
 </button>,
           <button
-            className="planet-button"
+            className="controls-button planet-button"
             onClick={[Function]}
             title="planets"
 >
             Planets
 </button>,
           <button
-            className="vehicle-button"
+            className="controls-button vehicle-button"
             onClick={[Function]}
             title="vehicles"
 >
             Vehicles
 </button>,
         ],
+        "className": "controls-container",
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": <button
             title="people"
-            class="people-button"
+            class="controls-button people-button"
 >
             People
 </button>,
@@ -87,7 +90,7 @@ ReactWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "People",
-            "className": "people-button",
+            "className": "controls-button people-button",
             "onClick": [Function],
             "title": "people",
           },
@@ -100,7 +103,7 @@ ReactWrapper {
         Object {
           "instance": <button
             title="planets"
-            class="planet-button"
+            class="controls-button planet-button"
 >
             Planets
 </button>,
@@ -108,7 +111,7 @@ ReactWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Planets",
-            "className": "planet-button",
+            "className": "controls-button planet-button",
             "onClick": [Function],
             "title": "planets",
           },
@@ -121,7 +124,7 @@ ReactWrapper {
         Object {
           "instance": <button
             title="vehicles"
-            class="vehicle-button"
+            class="controls-button vehicle-button"
 >
             Vehicles
 </button>,
@@ -129,7 +132,7 @@ ReactWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Vehicles",
-            "className": "vehicle-button",
+            "className": "controls-button vehicle-button",
             "onClick": [Function],
             "title": "vehicles",
           },
@@ -156,22 +159,24 @@ ReactWrapper {
       },
       "ref": null,
       "rendered": Object {
-        "instance": <div>
+        "instance": <div
+          class="controls-container"
+>
           <button
                     title="people"
-                    class="people-button"
+                    class="controls-button people-button"
           >
                     People
           </button>
           <button
                     title="planets"
-                    class="planet-button"
+                    class="controls-button planet-button"
           >
                     Planets
           </button>
           <button
                     title="vehicles"
-                    class="vehicle-button"
+                    class="controls-button vehicle-button"
           >
                     Vehicles
           </button>
@@ -181,34 +186,35 @@ ReactWrapper {
         "props": Object {
           "children": Array [
             <button
-              className="people-button"
+              className="controls-button people-button"
               onClick={[Function]}
               title="people"
 >
               People
 </button>,
             <button
-              className="planet-button"
+              className="controls-button planet-button"
               onClick={[Function]}
               title="planets"
 >
               Planets
 </button>,
             <button
-              className="vehicle-button"
+              className="controls-button vehicle-button"
               onClick={[Function]}
               title="vehicles"
 >
               Vehicles
 </button>,
           ],
+          "className": "controls-container",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": <button
               title="people"
-              class="people-button"
+              class="controls-button people-button"
 >
               People
 </button>,
@@ -216,7 +222,7 @@ ReactWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "People",
-              "className": "people-button",
+              "className": "controls-button people-button",
               "onClick": [Function],
               "title": "people",
             },
@@ -229,7 +235,7 @@ ReactWrapper {
           Object {
             "instance": <button
               title="planets"
-              class="planet-button"
+              class="controls-button planet-button"
 >
               Planets
 </button>,
@@ -237,7 +243,7 @@ ReactWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Planets",
-              "className": "planet-button",
+              "className": "controls-button planet-button",
               "onClick": [Function],
               "title": "planets",
             },
@@ -250,7 +256,7 @@ ReactWrapper {
           Object {
             "instance": <button
               title="vehicles"
-              class="vehicle-button"
+              class="controls-button vehicle-button"
 >
               Vehicles
 </button>,
@@ -258,7 +264,7 @@ ReactWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Vehicles",
-              "className": "vehicle-button",
+              "className": "controls-button vehicle-button",
               "onClick": [Function],
               "title": "vehicles",
             },

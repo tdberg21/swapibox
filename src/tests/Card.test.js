@@ -5,14 +5,14 @@ import { shallow } from 'enzyme';
 
 describe('CARD TESTS', () => {
   let wrapper;
-  let mockAddToFaves = jest.fn()
+  let mockCheckForFaves = jest.fn();
   
   it('matches the snapshot when a people are passed down', () => {
     let mockPeopleCard = { homeworld: "Tatooine", id: 1530987621630, name: "Luke Skywalker", population: "200000", species: "Human" };
     wrapper = shallow(<Card
       info={mockPeopleCard}
       key="0"
-      addToFaves={mockAddToFaves}
+      checkForFaves={mockCheckForFaves}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -23,7 +23,7 @@ describe('CARD TESTS', () => {
     wrapper = shallow(<Card
       info={mockPlanetCard}
       key="0"
-      addToFaves={mockAddToFaves}
+      checkForFaves={mockCheckForFaves}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -33,7 +33,7 @@ describe('CARD TESTS', () => {
     wrapper = shallow(<Card
       info={mockVehicleCard}
       key="0"
-      addToFaves={mockAddToFaves}
+      checkForFaves={mockCheckForFaves}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -43,11 +43,11 @@ describe('CARD TESTS', () => {
     wrapper = shallow(<Card
       info={mockVehicleCard}
       key="0"
-      addToFaves={mockAddToFaves}
+      checkForFaves={mockCheckForFaves}
     />);
 
     wrapper.find('button').simulate('click');
-    expect(mockAddToFaves).toHaveBeenCalledWith(0);
+    expect(mockCheckForFaves).toHaveBeenCalled();
   });
 
   it('should invoke addToFaves function when a favorite button is clicked on a planet card', () => {
@@ -57,11 +57,11 @@ describe('CARD TESTS', () => {
     wrapper = shallow(<Card
       info={mockPlanetCard}
       key="0"
-      addToFaves={mockAddToFaves}
+      checkForFaves={mockCheckForFaves}
     />);
 
     wrapper.find('button').simulate('click');
-    expect(mockAddToFaves).toHaveBeenCalledWith(1530987442516);
+    expect(mockCheckForFaves).toHaveBeenCalled();
   });
 
   it('should invoke addToFaves function when a favorite button is clicked on a person', () => {
@@ -69,11 +69,11 @@ describe('CARD TESTS', () => {
     wrapper = shallow(<Card
       info={mockPeopleCard}
       key="0"
-      addToFaves={mockAddToFaves}
+      checkForFaves={mockCheckForFaves}
     />);
 
     wrapper.find('button').simulate('click');
-    expect(mockAddToFaves).toHaveBeenCalledWith(1530987621630);
+    expect(mockCheckForFaves).toHaveBeenCalled();
   });
 
 });

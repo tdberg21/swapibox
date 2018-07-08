@@ -1,15 +1,15 @@
 import React from 'react';
 import Card from '../Card/Card.js';
-import './CardContainer.css'
+import './CardContainer.css';
 import PropTypes from 'prop-types';
 
-const CardContainer = ({ cards, addToFaves }) => {
+const CardContainer = ({ cards, checkForFaves }) => {
   const cardsToRender = cards.map(item => {
     return (
       <Card 
         info={item}
         key={item.id}
-        addToFaves={addToFaves} 
+        checkForFaves={checkForFaves} 
       />
     );
   });
@@ -23,7 +23,8 @@ const CardContainer = ({ cards, addToFaves }) => {
 };
 
 CardContainer.propTypes = {
-  cards: PropTypes.array
+  cards: PropTypes.array,
+  checkForFaves: PropTypes.func
 };
 
 export default CardContainer;
