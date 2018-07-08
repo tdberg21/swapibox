@@ -14,3 +14,8 @@ Run `npm start`
 
 
 [Tory Dannenberg](https://github.com/tdberg21)
+
+
+#### Landing Page:
+![Landing Page](./src/images/landing-page.jpg "Landing Page")
+

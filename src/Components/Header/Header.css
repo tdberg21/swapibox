@@ -2,7 +2,12 @@
   display: flex;
   justify-content: space-between;
   padding-right: 50px;
-  padding-left: 50px;
+  padding-left: 10%;
+}
+
+.title {
+  color: #fff;
+  margin-left: 50px;
 }
 
 .show-faves-button {
@@ -10,7 +15,7 @@
   margin-top: 10px;
   background-color: #333;
   border: none;
-  color: yellow;
+  color: #fff;
 }
 
 h1 {

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Header = (props) => {
   return (
     <div className= "header">
-      <h1 className="title">SWAPI BOX</h1>
+      <h1 className="title">SwapiBox</h1>
       <button
         onClick={props.showFaves}
         className="show-faves-button"

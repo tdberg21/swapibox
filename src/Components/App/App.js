@@ -181,7 +181,9 @@ class App extends Component {
         <aside className="text-scroll-container"> 
           <p className="text-scroll">
             {this.state.scrollTextMovie.text}
+            <br/>
             {this.state.scrollTextMovie.title}
+            <br/>
             {this.state.scrollTextMovie.year}
           </p>
         </aside>
