@@ -82,7 +82,7 @@ class App extends Component {
       .then(parsedData => this.fetchHomeWorld(parsedData.results))
       .then(results => this.fetchSpecies(results)) 
       .then(people => this.setState({cards: people}))
-      .catch(error => console.log(error));
+      .catch(error => alert(error));
   }
 
   fetchHomeWorld = (results) => {
