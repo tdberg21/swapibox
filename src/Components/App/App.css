@@ -1,10 +1,12 @@
-
+.App {
+  display: flex;
+  min-height: 1500px;
+}
 .text-scroll-container {
   width: 15vw;
   background-color: #000000;
   display: inline-block;
-  height: 1000px;
-  padding: 15px;
+  padding: 0 15px 0 15px;
 }
 
 .text-scroll {
@@ -15,15 +17,13 @@
   animation: scroll 100s linear 0s infinite;
 }
 
-main {
+.card-holder {
   width: 85vw;
-  background-image: url(../../space.jpg);
+  background-image: url(../../images/space.jpg);
   background-size: contain;
   display: inline-block;
-  position: fixed;
   top: 0;
-  height: 2000px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 @keyframes scroll {

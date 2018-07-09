@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Header
-    favorites="[]"
+    favorites={Array []}
     showFaves={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -32,7 +32,7 @@ ShallowWrapper {
           onClick={[Function]}
 >
           View Favorites 
-          2
+          0
 </button>,
       ],
       "className": "header",
@@ -60,7 +60,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             "View Favorites ",
-            2,
+            0,
           ],
           "className": "show-faves-button",
           "onClick": [Function],
@@ -68,7 +68,7 @@ ShallowWrapper {
         "ref": null,
         "rendered": Array [
           "View Favorites ",
-          2,
+          0,
         ],
         "type": "button",
       },
@@ -93,7 +93,7 @@ ShallowWrapper {
             onClick={[Function]}
 >
             View Favorites 
-            2
+            0
 </button>,
         ],
         "className": "header",
@@ -121,7 +121,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "View Favorites ",
-              2,
+              0,
             ],
             "className": "show-faves-button",
             "onClick": [Function],
@@ -129,7 +129,7 @@ ShallowWrapper {
           "ref": null,
           "rendered": Array [
             "View Favorites ",
-            2,
+            0,
           ],
           "type": "button",
         },

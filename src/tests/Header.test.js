@@ -5,10 +5,10 @@ import { shallow } from 'enzyme';
 
 describe('HEADER TESTS', () => {
   let wrapper;
-
+  let mockFaves = [];
   beforeEach(() => {
     wrapper = shallow(<Header 
-                        favorites="[]"
+                        favorites={mockFaves}
                         showFaves={jest.fn()}
                       />);
   });

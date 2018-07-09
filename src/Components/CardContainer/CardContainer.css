@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  overflow: scroll;
+  overflow: visible;
   padding-right: 25px;
   padding-top: 30px;
 }
