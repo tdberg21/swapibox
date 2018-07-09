@@ -11,7 +11,7 @@ const fetchData = async (category) => {
     let parsedResponse = response.json();
     return parsedResponse;
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 };
 
