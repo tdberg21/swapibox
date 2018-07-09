@@ -21,11 +21,12 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1
-          className="title"
->
-          SWAPI BOX
-</h1>,
+        <img
+          alt="Star Wars Logo"
+          height="100"
+          src="http://1000logos.net/wp-content/uploads/2017/06/Star-Wars-symbol.jpg"
+          width="250"
+/>,
         <button
           className="show-faves-button"
           onClick={[Function]}
@@ -43,12 +44,14 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "SWAPI BOX",
-          "className": "title",
+          "alt": "Star Wars Logo",
+          "height": "100",
+          "src": "http://1000logos.net/wp-content/uploads/2017/06/Star-Wars-symbol.jpg",
+          "width": "250",
         },
         "ref": null,
-        "rendered": "SWAPI BOX",
-        "type": "h1",
+        "rendered": null,
+        "type": "img",
       },
       Object {
         "instance": null,
@@ -79,11 +82,12 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1
-            className="title"
->
-            SWAPI BOX
-</h1>,
+          <img
+            alt="Star Wars Logo"
+            height="100"
+            src="http://1000logos.net/wp-content/uploads/2017/06/Star-Wars-symbol.jpg"
+            width="250"
+/>,
           <button
             className="show-faves-button"
             onClick={[Function]}
@@ -101,12 +105,14 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "SWAPI BOX",
-            "className": "title",
+            "alt": "Star Wars Logo",
+            "height": "100",
+            "src": "http://1000logos.net/wp-content/uploads/2017/06/Star-Wars-symbol.jpg",
+            "width": "250",
           },
           "ref": null,
-          "rendered": "SWAPI BOX",
-          "type": "h1",
+          "rendered": null,
+          "type": "img",
         },
         Object {
           "instance": null,

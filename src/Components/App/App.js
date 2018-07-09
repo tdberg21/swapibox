@@ -3,7 +3,6 @@ import Header from '../Header/Header.js';
 import Controls from '../Controls/Controls.js';
 import CardContainer from '../CardContainer/CardContainer.js';
 import fetchData from '../../apiCalls.js';
-import generateRandomNumber from '../../helper.js';
 import './App.css';
 
 
@@ -19,9 +18,8 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    let number = generateRandomNumber() + 1;
     let category = 'films';
-    const scrollTextMovie = await fetchData(number, category);
+    const scrollTextMovie = await fetchData(category);
     const scrollTextYear = scrollTextMovie.release_date;
     await this.setState({
       scrollTextMovie: {

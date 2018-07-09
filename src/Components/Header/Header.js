@@ -2,15 +2,15 @@ import React from 'react';
 import './Header.css';
 import PropTypes from 'prop-types';
 
-const Header = (props) => {
+const Header = ({ showFaves, favorites }) => {
   return (
     <div className= "header">
-      <h1 className="title">SwapiBox</h1>
+      <img src="http://1000logos.net/wp-content/uploads/2017/06/Star-Wars-symbol.jpg" alt="Star Wars Logo" height="100" width="250"/>
       <button
-        onClick={props.showFaves}
+        onClick={showFaves}
         className="show-faves-button"
       >
-      View Favorites {props.favorites.length}
+      View Favorites {favorites.length}
       </button>
     </div>
   );
