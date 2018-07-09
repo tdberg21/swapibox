@@ -71,20 +71,3 @@ Card.propTypes = {
 };
 
 export default Card;
-
-
-
-// Planet Cards:
-// Name
-// Terrain
-// Population
-// Climate
-// Residents
-// A button to “Favorite” the planet
-// Vehicle Cards:
-// Name
-// Model
-// Class
-// Number of Passengers
-// A button to “Favorite” the vehicle
-

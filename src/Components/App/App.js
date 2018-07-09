@@ -185,7 +185,7 @@ class App extends Component {
             {this.state.scrollTextMovie.year}
           </p>
         </aside>
-        <main>
+        <main className="card-holder">
           <Header 
             favorites={this.state.favorites}
             showFaves={this.showFaves}/>

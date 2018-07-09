@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import App from '../Components/App/App.js';
 import { shallow, mount } from 'enzyme';
 
-
 describe('APP TESTS', () => {
 
   it('should have a default state of cards that is an empty array', () => {
@@ -22,14 +21,13 @@ describe('APP TESTS', () => {
 
     window.fetch = await jest.fn().mockImplementation(() => Promise.resolve({
       json: () => Promise.resolve(mockScrollTextInfo)
-    }))
+    }));
     const wrapper = mount(<App />);
-    console.log(wrapper.state())
+
     expect(wrapper.state('scrollTextMovie')).toEqual({});
   });
 
   it('should call fetch with the correct params when getData is invoked', () => {
-    // Setup
     const mockEvent = { target: {title: 'people'} };
     const expectedParams = 'https://swapi.co/api/people/';
     const wrapper = shallow(<App />);
@@ -37,16 +35,12 @@ describe('APP TESTS', () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       json: () => Promise.resolve(mockPeopleInfo)
     }));
-
-    // Execution
     wrapper.instance().getData(mockEvent);
 
-    // Expection
     expect(window.fetch).toHaveBeenCalledWith(expectedParams);
   });
 
   it('should call fetch with the correct params when getPLanetData is invoked', () => {
-    // Setup
     const mockEvent = { target: { title: 'planet' } };
     const expectedParams = 'https://swapi.co/api/planet/';
     const wrapper = shallow(<App />);
@@ -55,10 +49,8 @@ describe('APP TESTS', () => {
       json: () => Promise.resolve(mockPlanetInfo)
     }));
 
-    // Execution
     wrapper.instance().getPlanetData(mockEvent);
 
-    // Expection
     expect(window.fetch).toHaveBeenCalledWith(expectedParams);
   });
 
@@ -66,7 +58,8 @@ describe('APP TESTS', () => {
     const mockVehicles = [
       { "name": "Sand Crawler", "model": "Digger Crawler", "manufacturer": "Corellia Mining Corporation", "cost_in_credits": "150000", "length": "36.8", "max_atmosphering_speed": "30", "crew": "46", "passengers": "30", "cargo_capacity": "50000", "consumables": "2 months", "vehicle_class": "wheeled", "pilots": []
       }];
-      const wrapper = shallow(<App />);
+    const wrapper = shallow(<App />);
+
     expect(wrapper.instance().cleanVehicleData(mockVehicles)).toEqual([{ "class": "wheeled", "id": "0 Sand Crawler", "model": "Digger Crawler", "name": "Sand Crawler", "passengers": "30" }]);
   });
 
@@ -76,6 +69,7 @@ describe('APP TESTS', () => {
     const wrapper = shallow(<App />);
     wrapper.instance().setState({cards: mockState});
     wrapper.instance().addToFaves(mockKey);
+    
     expect(wrapper.state('favorites')).toEqual([{ "class": "wheeled", "id": "0 Sand Crawler", "model": "Digger Crawler", "name": "Sand Crawler", "passengers": "30" }]);
 
   });
@@ -93,23 +87,4 @@ describe('APP TESTS', () => {
 
   });
 
-  });
-
-
-
- // it('should call fetch with the correct params when getPLanetData is invoked', () => {
-  //   // Setup
-  //   const mockEvent = { target: { title: 'vehicle' } };
-  //   const expectedParams = 'https://swapi.co/api/vehicle/';
-  //   const wrapper = shallow(<App />);
-  //   const mockVehicleInfo = [];
-  //   window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-  //     json: () => Promise.resolve(mockVehicleInfo)
-  //   }));
-
-  //   // Execution
-  //   wrapper.instance().getVehicleData(mockEvent);
-
-  //   // Expection
-  //   expect(window.fetch).toHaveBeenCalledWith(expectedParams);
-  // });
+});
