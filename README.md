@@ -17,5 +17,8 @@ Run `npm start`
 
 
 #### Landing Page:
-![Landing Page](./src/images/landing-page.jpg "Landing Page")
+![Landing Page](./src/images/landing-page.png "Landing Page")
+
+#### People Data:
+![People Data Page](./src/images/landing-page.png "People Data Page")
 

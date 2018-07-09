@@ -2,12 +2,11 @@
   display: flex;
   justify-content: space-between;
   padding-right: 50px;
-  padding-left: 10%;
+  padding-left: 33%;
 }
 
-.title {
-  color: #fff;
-  margin-left: 50px;
+img {
+  margin: 20px 0 20px 50px;
 }
 
 .show-faves-button {

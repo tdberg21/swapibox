@@ -12,7 +12,6 @@
   position: absolute;
 	width: 15vw;
 	bottom: 0;
-  overflow: hidden;
   animation: scroll 100s linear 0s infinite;
 }
 
@@ -23,7 +22,7 @@ main {
   display: inline-block;
   position: fixed;
   top: 0;
-  height: 1000px;;
+  height: 2000px;
   overflow: scroll;
 }
 
