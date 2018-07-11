@@ -5,60 +5,22 @@ import './Card.css';
 
 const Card = (props) => {
 
-  if (props.info.species) {
-    return (
-      <div className="card">
-        <h5>{props.info.name}</h5>
-        <p>Species: {props.info.species} </p>
-        <p>Homeworld: {props.info.homeworld}</p>
-        <p>Homeworld population:{props.info.population}</p>
-        <button 
-          onClick={(event) => props.checkForFaves(props.info.id, event)}
-          className="favorite-button">
+  const cardToRender = Object.keys(props.info).map((item, index) => {
+    if (item !== 'id') {
+      return <p key={index}> {[item]} : {props.info[item]} </p>;
+    }
+  });
+
+  return (
+    <div className="card">
+      {cardToRender}
+      <button
+        onClick={(event) => props.checkForFaves(props.info.id, event)}
+        className="favorite-button">
           Favorite
-        </button>
-      </div>
-    );
-  } 
-  
-  if (props.info.terrain) {
-    const residentsToDisplay = props.info.residents.map((resident, index) => {
-      return (<li key={index}>{resident}</li>);
-    });
-    
-    return (
-      <div className="card">
-        <h5>{props.info.name}</h5>
-        <p>Climate: {props.info.climate} </p>
-        <p>Terrain: {props.info.terrain}</p>
-        <p>Population:{props.info.population}</p>
-        <ul>Residents:{residentsToDisplay}</ul>
-        <button 
-          onClick={(event) => props.checkForFaves(props.info.id, event)}
-          className="favorite-button"
-        >
-        Favorite
-        </button>
-      </div>
-    );
-  } 
-   
-  if (props.info.model) {
-    return (
-      <div className="card">
-        <h5>{props.info.name}</h5>
-        <p>Model: {props.info.model} </p>
-        <p>Class: {props.info.class}</p>
-        <p>Passengers:{props.info.passengers}</p>
-        <button 
-          onClick={(event) => props.checkForFaves(props.info.id, event)}
-          className="favorite-button"
-        >
-        Favorite
-        </button>
-      </div>
-    );
-  }
+      </button>
+    </div>
+  );
 };
 
 Card.propTypes = {

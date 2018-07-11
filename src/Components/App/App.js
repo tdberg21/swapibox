@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../Header/Header.js';
 import Controls from '../Controls/Controls.js';
 import CardContainer from '../CardContainer/CardContainer.js';
-import fetchData from '../../apiCalls.js';
+import { fetchData, getPeopleData } from '../../apiCalls.js';
 import './App.css';
 
 
@@ -74,39 +74,11 @@ class App extends Component {
     });
   }
 
-  getData = (event) => {
+  getData = async (event) => {
     var category = event.target.title;
-    const url = `https://swapi.co/api/${category}/`;
-    fetch(url)
-      .then(response => response.json()) 
-      .then(parsedData => this.fetchHomeWorld(parsedData.results))
-      .then(results => this.fetchSpecies(results)) 
-      .then(people => this.setState({cards: people}))
-      .catch(error => alert(error));
-  }
-
-  fetchHomeWorld = (results) => {
-    const unresolvedPromises = results.map(person => (
-      fetch(person.homeworld)
-        .then(response => response.json())
-        .then(results => ({ ...person, homeworld: results.name, population: results.population }))
-    ));
-    return Promise.all(unresolvedPromises);
-  }
-
-  fetchSpecies = (apiData) => {
-    const unresolvedPromises = apiData.map((person, index) => (
-      fetch(person.species)
-        .then(response => response.json())
-        .then(results => ({ 
-          name: person.name, 
-          homeworld: person.homeworld, 
-          population: person.population, 
-          species: results.name, 
-          id: `${index} ${person.name}` 
-        }))
-    ));
-    return Promise.all(unresolvedPromises);
+    const people = await getPeopleData(category);
+    console.log(people);
+    this.setState({ cards: people });
   }
 
   getPlanetData = (event) => {
