@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import Header from '../Header/Header.js';
 import Controls from '../Controls/Controls.js';
 import CardContainer from '../CardContainer/CardContainer.js';
-import { fetchData, getPeopleData } from '../../apiCalls.js';
+import { fetchData, getPeople, fetchPlanets, fetchVehicleData } from '../../apiCalls.js';
 import './App.css';
-
 
 class App extends Component {
   constructor () {
@@ -74,75 +73,22 @@ class App extends Component {
     });
   }
 
-  getData = async (event) => {
-    var category = event.target.title;
-    const people = await getPeopleData(category);
-    console.log(people);
+  getPeopleData = async (event) => {
+    let category = event.target.title;
+    const people = await getPeople(category);
     this.setState({ cards: people });
   }
 
-  getPlanetData = (event) => {
-    var category = event.target.title;
-    const url = `https://swapi.co/api/${category}/`;
-    return fetch(url)
-      .then(response => response.json())
-      .then(planets => this.cleanPlanetData(planets.results))
-      .then(cleanPlanets =>  {
-        return cleanPlanets.map(planet => {
-          this.fetchResidents(planet.residents)
-            .then(names => planet.residents = names);
-          return planet;
-        });
-      }
-      )
-      .then(results => this.setState({cards: results}))
-      .catch(error => alert(error));
+  getPlanetData = async (event) => {
+    let category = event.target.title;
+    const planets = await fetchPlanets(category);
+    this.setState({ cards: planets });
   }
 
-  cleanPlanetData = (planets) => {
-    const cleanPlanets = planets.map((planet, index) => { 
-      return {
-        name: planet.name,
-        population: planet.population,
-        terrain: planet.terrain,
-        climate: planet.climate,
-        residents: planet.residents, 
-        id: `${index} ${planet.name}`
-      };
-    });
-    return cleanPlanets;
-  }
-
-  fetchResidents = (residentsURLs) => {
-    const unresolvedPromises = residentsURLs.map(resident => (
-      fetch(resident)
-        .then(response => response.json())
-        .then(resident => resident.name)
-        .catch(error => console.log(error))
-    ));
-    return Promise.all(unresolvedPromises);
-  }
-
-  getVehicleData = (event) => {
-    var category = event.target.title;
-    const url = `https://swapi.co/api/${category}/`;
-    fetch(url)
-      .then(response => response.json())
-      .then(parsedData => this.cleanVehicleData(parsedData.results))
-      .then(cleanData => this.setState({cards: cleanData}));
-  }
-
-  cleanVehicleData = (vehicles) => {
-    const vehiclesToRender = vehicles.map((vehicle, index) => {
-      return {
-        name: vehicle.name,
-        model: vehicle.model,
-        class: vehicle.vehicle_class,
-        passengers: vehicle.passengers,
-        id: `${index} ${vehicle.name}`
-      };
-    });
-    return vehiclesToRender;
+  getVehicleData = async (event) => {
+    let category = event.target.title;
+    const vehicles = await fetchVehicleData(category);
+    this.setState({cards: vehicles});
   }
 
   render() {
@@ -162,7 +108,7 @@ class App extends Component {
             favorites={this.state.favorites}
             showFaves={this.showFaves}/>
           <Controls 
-            getData= {this.getData}
+            getData= {this.getPeopleData}
             getPlanetData= {this.getPlanetData}
             getVehicleData= {this.getVehicleData}
           />
